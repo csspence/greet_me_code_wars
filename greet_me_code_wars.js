@@ -7,6 +7,13 @@ Example:
 "JACK"  --> "Hello Jack!"
 */
 
-var greet = function(name) {
+const greet = (name) => {
+  name = name.toLowerCase();
+  const innerFunc = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  let final = innerFunc(name);
+
+  return 'Hello ' + final + '!';
 
 };
